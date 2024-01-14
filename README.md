@@ -15,7 +15,7 @@ flash_nordic() {
         sleep 0.1;
         echo "nrf51 mass_erase";
         sleep 1;
-        echo "flash write_image erase" $(readlink -f ./custom/armgcc/_build/nrf51822_xxac-keyboard-right.hex $1);
+        echo "flash write_image erase" $(readlink -f $1);
         sleep 11
         echo "reset";
         exit;
